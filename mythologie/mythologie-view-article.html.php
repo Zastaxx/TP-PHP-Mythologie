@@ -75,29 +75,10 @@ $data3 = allCommentaires($getid, $db);
                 <!-- BOUTON SUPPR COM -->
                 <?php if (isset($_COOKIE['id']) || isset($_SESSION['id'])) {
                 if ($_SESSION['pseudo'] == $idcom->nom_user) { ?>
-                <div class="badge bg-danger text-white position-absolute" style="top: .5rem; right: .5rem"><a type="button" data-bs-toggle="modal" data-bs-target="#Modal">&#x274C;</a></div>
+                <div class="badge bg-danger text-white position-absolute" style="top: .5rem; right: .5rem"><a class="delcom" type="button" href="mythologie-delcom.php?delete=<?= htmlspecialchars($value->id_com) ?>" onclick="return confirm('Êtes-vous sur de vouloir supprimer le commentaire : <?= htmlspecialchars($value->text_com) ?> ?');">&#x274C;</a></div>
                 <?php } } ?>
             </div>
         </div>
-
-        <!-- MODAL SUPPR COM -->
-        <div class="modal fade" id="Modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                <div class="modal-dialog">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title" id="exampleModalLabel">Suppresion</h5>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                        </div>
-                        <div class="modal-body">
-                            Êtes-vous sûr de vouloir le commentaire : <?= htmlspecialchars($value->text_com) ?> ?
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Annuler</button>
-                            <a type="button" class="btn btn-success icon" href="mythologie-delcom.php?delete=<?= htmlspecialchars($value->id_com) ?>">Confirmer</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
     <?php } ?>
 </div>
 
