@@ -28,6 +28,11 @@
     margin-top: 0.5em;
 }
 
+.delcom {
+    text-decoration: none;
+    color: white;
+}
+
 @media (max-width:990px) {
     .center {
         width: 80%;
