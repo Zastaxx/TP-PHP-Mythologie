@@ -1,0 +1,35 @@
+.imgcard {
+    width: 100%;
+    margin: 1em 0;
+}
+
+.imgcardA {
+    width: 50%;
+    margin: 1em auto;
+}
+
+.center {
+    width: 60%;
+    margin: 2em auto;
+}
+
+.auteur {
+    font-weight: 600;
+    display: inline;
+}
+
+.message {
+    margin-top: 1em;
+    margin-bottom: 0em;
+    font-weight: 600;
+}
+
+.btn {
+    margin-top: 0.5em;
+}
+
+@media (max-width:990px) {
+    .center {
+        width: 80%;
+    }
+}
